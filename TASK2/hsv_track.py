@@ -1,11 +1,11 @@
 import cv2 as cv
 
-cap = cv.VideoCapture('files/Ball_Tracking.mp4')  # change path
+cap = cv.VideoCapture('files/Ball_Tracking.mp4')  
 hsv = None
 
 def show_hsv(event, x, y, flags, param):
     if event == cv.EVENT_LBUTTONDOWN:
-        print(hsv[y, x])   # prints HSV value
+        print(hsv[y, x])  
 
 cv.namedWindow('Video')
 cv.setMouseCallback('Video', show_hsv)
